@@ -46,7 +46,7 @@ jobs:
         run:
           |
           sudo apt-get install -y zip
-          zip app.zip Dockerfile appspec.yml deploy.sh -r ./build/libs/projectCONA-0.0.1-SNAPSHOT.jar
+          zip app.zip Dockerfile appspec.yml deploy.sh -r ./build/libs/*SNAPSHOT.jar
 
       - name: Upload to S3
         run: aws s3 cp --region ap-northeast-2 ./app.zip s3://${{ secrets.AWS_S3_BUCKET }}/jar_file/
