@@ -17,8 +17,8 @@ fi
 
 echo "> $REPOSITORY"
 
-nohup docker build -t cona-api:latest .
-nohup if [ $(docker ps -aq -f "name=cona-api") ]; then docker stop "$(docker ps -aq -f "name=cona-api")"; fi
-nohup if [ $(docker ps -aq -f "name=cona-api") ]; then docker rm "$(docker ps -aq -f "name=cona-api")"; fi
+docker build -t cona-api:latest .
+if [ $(docker ps -aq -f "name=cona-api") ]; then docker stop "$(docker ps -aq -f "name=cona-api")"; fi
+if [ $(docker ps -aq -f "name=cona-api") ]; then docker rm "$(docker ps -aq -f "name=cona-api")"; fi
 nohup docker run -d -p 8080:8080 -v $(pwd):/web/api --name cona-api cona-api &
 
