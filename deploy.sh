@@ -15,6 +15,8 @@ else
         sleep 5
 fi
 
-echo "> $REPOSITORY"
-nohup docker build -t cona-api:latest . > /dev/null 2> /dev/null < /dev/null &
-nohup docker run -d -p 8080:8080 -v $(pwd):/web/api --name cona-api cona-api > /dev/null 2> /dev/null < /dev/null &
+
+nohup docker build -t cona-api:latest .
+nohup if [ $(docker ps -a -f "name=cona-api") ]; then docker stop "$(docker ps -a -q -f "name=cona-api")"; fi
+nohup if [ $(docker ps -a -f "name=cona-api") ]; then docker rm "$(docker ps -a -q -f "name=cona-api")"; fi
+nohup docker run -d -p 8080:8080 -v $(pwd):/web/api --name cona-api cona-api &
