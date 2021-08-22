@@ -28,6 +28,10 @@ public class KakaoApiSdk {
                 .baseUrl(this.BASEURL)
                 .build();
 
+        /*
+        TODO
+        4개의 rect 값이 안들어왔을 경우 예외처리 추가
+         */
         return webClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .queryParam("query", requestDto.getKeyword())

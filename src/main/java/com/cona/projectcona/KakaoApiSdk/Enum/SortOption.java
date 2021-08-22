@@ -9,6 +9,7 @@ public enum SortOption {
 
     private String option;
 
-    SortOption(String option) {
+    private SortOption(String option) {
+        this.option = option;
     }
 }
