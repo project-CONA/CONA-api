@@ -16,7 +16,7 @@ import javax.validation.Valid;
 @RequestMapping("/place")
 public class PlaceController {
 
-    private final PlaceService placeService;
+    private final PlaceServiceImpl placeService;
 
     @GetMapping("/search")
     public PlaceResponseDtos searchPlace(@RequestBody @Valid PlaceRequestDto placeRequestDto) {
