@@ -1,15 +1,16 @@
 package com.cona.projectcona.Place;
 
 import com.cona.projectcona.KakaoApiSdk.Enum.PlaceCategoryCode;
+import com.cona.projectcona.Review.Review;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -41,4 +42,7 @@ public class Place {
     private String placeUrl;
 
     private LocalDateTime createdAt;
+
+    @OneToMany(mappedBy = "review")
+    List<Review> reviews = new ArrayList<>();
 }
