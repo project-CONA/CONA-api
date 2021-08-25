@@ -14,33 +14,33 @@ import javax.validation.constraints.*;
 public class KeywordSearchRequestDto {
 
     // ex) 37.56203
-    private final String SINGLE_COOR_REGEX = "^[+\\-]?[0-9]{1,3}\\.[0-9]{3,}";
+    private final static String SINGLE_COOR_REGEX = "^[+\\-]?[0-9]{1,3}\\.[0-9]{3,}";
 
     @NotBlank
     private String keyword;
 
     private PlaceCategoryCode categoryGroupCode;
 
-    @Pattern(regexp = this.SINGLE_COOR_REGEX)
+    @Pattern(regexp = KeywordSearchRequestDto.SINGLE_COOR_REGEX)
     private String x;
 
-    @Pattern(regexp = this.SINGLE_COOR_REGEX)
+    @Pattern(regexp = KeywordSearchRequestDto.SINGLE_COOR_REGEX)
     private String y;
 
     @Positive
     @Max(20000)
     private Integer radius;
 
-    @Pattern(regexp = this.SINGLE_COOR_REGEX)
+    @Pattern(regexp = KeywordSearchRequestDto.SINGLE_COOR_REGEX)
     private String rectLeftX;
 
-    @Pattern(regexp = this.SINGLE_COOR_REGEX)
+    @Pattern(regexp = KeywordSearchRequestDto.SINGLE_COOR_REGEX)
     private String rectLeftY;
 
-    @Pattern(regexp = this.SINGLE_COOR_REGEX)
+    @Pattern(regexp = KeywordSearchRequestDto.SINGLE_COOR_REGEX)
     private String rectRightX;
 
-    @Pattern(regexp = this.SINGLE_COOR_REGEX)
+    @Pattern(regexp = KeywordSearchRequestDto.SINGLE_COOR_REGEX)
     private String rectRightY;
 
     @Positive
