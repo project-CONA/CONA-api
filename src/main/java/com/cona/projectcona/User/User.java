@@ -31,8 +31,6 @@ public class User {
 
     private String profileImg;
 
-    private String refreshToken;
-
     @OneToMany(mappedBy = "place")
     private List<PinPlace> pinPlaces;
 
