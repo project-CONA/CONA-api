@@ -1,7 +1,7 @@
-package com.cona.projectcona.KakaoApiSdk;
+package com.cona.projectcona.KakaoPlaceSearchApiSdk;
 
-import com.cona.projectcona.KakaoApiSdk.Dto.KeywordSearchRequestDto;
-import com.cona.projectcona.KakaoApiSdk.Dto.KeywordSearchResponseDtos;
+import com.cona.projectcona.KakaoPlaceSearchApiSdk.Dto.KeywordSearchRequestDto;
+import com.cona.projectcona.KakaoPlaceSearchApiSdk.Dto.KeywordSearchResponseDtos;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.env.Environment;
 import org.springframework.http.MediaType;
@@ -10,7 +10,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 @Component
 @RequiredArgsConstructor
-public class KakaoApiSdk {
+public class KakaoPlaceSearchApiSdk {
 
     private final WebClient.Builder builder;
 
