@@ -32,7 +32,7 @@ public class User {
     private String profileImg;
 
     @OneToMany(mappedBy = "place")
-    private List<PinPlace> pinPlaces;
+    private List<PinPlace> pinPlaces = new ArrayList<>();
 
     private LocalDateTime signedAt;
 
