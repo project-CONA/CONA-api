@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -25,4 +26,5 @@ public class Follow {
     @JoinColumn(name = "follower_id")
     private User follower;
 
+    private LocalDateTime followAt;
 }
