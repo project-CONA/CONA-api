@@ -1,7 +1,8 @@
-package com.cona.projectcona.PinPlace;
+package com.cona.projectcona.UserPlace.Review;
 
 import com.cona.projectcona.Place.Place;
 import com.cona.projectcona.User.User;
+import com.cona.projectcona.UserPlace.UserPlace;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,17 +13,16 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter
+@Setter
+@DiscriminatorValue("review")
 @AllArgsConstructor
 @NoArgsConstructor
-public class PinPlace {
-    @Id @GeneratedValue
-    private Long id;
+public class Review extends UserPlace {
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private User user;
+    private String content;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Place place;
+    private float score;
 
-    private LocalDateTime createdAt;
+    //TODO: 이미지 리스트
+
 }

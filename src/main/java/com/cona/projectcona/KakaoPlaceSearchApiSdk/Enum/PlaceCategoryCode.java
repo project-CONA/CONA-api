@@ -1,4 +1,4 @@
-package com.cona.projectcona.KakaoApiSdk.Enum;
+package com.cona.projectcona.KakaoPlaceSearchApiSdk.Enum;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import lombok.Getter;

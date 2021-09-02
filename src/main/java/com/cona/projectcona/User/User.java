@@ -1,16 +1,14 @@
 package com.cona.projectcona.User;
 
+import com.cona.projectcona.Follow.Follow;
 import com.cona.projectcona.Place.Place;
-import com.cona.projectcona.Review.Review;
+import com.cona.projectcona.UserPlace.PinPlace.PinPlace;
+import com.cona.projectcona.UserPlace.Review.Review;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +18,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-    @Id @GeneratedValue
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Long userId;
@@ -31,19 +31,17 @@ public class User {
 
     private String profileImg;
 
-    private String refreshToken;
-
     @OneToMany(mappedBy = "place")
-    private List<Place> pinPlaces;
+    private List<PinPlace> pinPlaces = new ArrayList<>();
 
     private LocalDateTime signedAt;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "follower", targetEntity = Follow.class)
     List<User> followers = new ArrayList<>();
 
-    @OneToMany(mappedBy ="user")
+    @OneToMany(mappedBy ="following", targetEntity = Follow.class)
     List<User> following = new ArrayList<>();
 
-    @OneToMany(mappedBy = "review")
+    @OneToMany(mappedBy = "user")
     List<Review> reviews = new ArrayList<>();
 }

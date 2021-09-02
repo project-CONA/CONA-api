@@ -1,4 +1,4 @@
-package com.cona.projectcona.KakaoApiSdk.Dto;
+package com.cona.projectcona.KakaoPlaceSearchApiSdk.Dto;
 
 import lombok.*;
 

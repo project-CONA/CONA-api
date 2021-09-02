@@ -1,10 +1,9 @@
 package com.cona.projectcona.Place;
 
-import com.cona.projectcona.KakaoApiSdk.Dto.KeywordSearchRequestDto;
-import com.cona.projectcona.KakaoApiSdk.Dto.KeywordSearchResponseDtos;
-import com.cona.projectcona.KakaoApiSdk.KakaoApiSdk;
+import com.cona.projectcona.KakaoPlaceSearchApiSdk.Dto.KeywordSearchRequestDto;
+import com.cona.projectcona.KakaoPlaceSearchApiSdk.Dto.KeywordSearchResponseDtos;
+import com.cona.projectcona.KakaoPlaceSearchApiSdk.KakaoPlaceSearchApiSdk;
 import com.cona.projectcona.Place.Dto.PlaceRequestDto;
-import com.cona.projectcona.Place.Dto.PlaceResponseDtos;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +11,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class PlaceServiceImpl implements PlaceService {
 
-    private final KakaoApiSdk kakaoApiSdk;
+    private final KakaoPlaceSearchApiSdk kakaoApiSdk;
 
     private final PlaceRepository placeRepository;
     @Override

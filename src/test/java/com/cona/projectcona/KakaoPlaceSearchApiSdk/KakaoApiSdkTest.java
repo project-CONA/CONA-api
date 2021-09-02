@@ -1,8 +1,8 @@
-package com.cona.projectcona.KakaoApiSdk;
+package com.cona.projectcona.KakaoPlaceSearchApiSdk;
 
-import com.cona.projectcona.KakaoApiSdk.Enum.PlaceCategoryCode;
-import com.cona.projectcona.KakaoApiSdk.Dto.KeywordSearchRequestDto;
-import com.cona.projectcona.KakaoApiSdk.Dto.KeywordSearchResponseDtos;
+import com.cona.projectcona.KakaoPlaceSearchApiSdk.Enum.PlaceCategoryCode;
+import com.cona.projectcona.KakaoPlaceSearchApiSdk.Dto.KeywordSearchRequestDto;
+import com.cona.projectcona.KakaoPlaceSearchApiSdk.Dto.KeywordSearchResponseDtos;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class KakaoApiSdkTest {
 
     @Autowired
-    private KakaoApiSdk kakaoApiSdk;
+    private KakaoPlaceSearchApiSdk kakaoApiSdk;
 
     @Test
     void keywordSearch() {

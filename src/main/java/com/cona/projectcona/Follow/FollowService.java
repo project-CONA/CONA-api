@@ -1,7 +1,6 @@
 package com.cona.projectcona.Follow;
 
-import com.cona.projectcona.PinPlace.PinPlace;
-import com.cona.projectcona.Place.Place;
+import com.cona.projectcona.UserPlace.PinPlace.PinPlace;
 import com.cona.projectcona.User.User;
 
 /**
