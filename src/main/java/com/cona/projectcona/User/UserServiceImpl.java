@@ -1,6 +1,8 @@
 package com.cona.projectcona.User;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -36,6 +38,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User followUser(Long followerId, Long followingId) {
+        return null;
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return null;
     }
 }

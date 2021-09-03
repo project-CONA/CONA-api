@@ -1,7 +1,7 @@
-package com.cona.projectcona.KakaoPlaceSearchApiSdk.Dto;
+package com.cona.projectcona.KakaoPlaceSearchSdk.Dto;
 
-import com.cona.projectcona.KakaoPlaceSearchApiSdk.Enum.PlaceCategoryCode;
-import com.cona.projectcona.KakaoPlaceSearchApiSdk.Enum.SortOption;
+import com.cona.projectcona.KakaoPlaceSearchSdk.Enum.PlaceCategoryCode;
+import com.cona.projectcona.KakaoPlaceSearchSdk.Enum.SortOption;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
