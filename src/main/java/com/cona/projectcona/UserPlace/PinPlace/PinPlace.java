@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 @Entity
 @DiscriminatorValue("pin_place")
 @Getter @Setter
+@NoArgsConstructor
 public class PinPlace extends UserPlace {
 
 }

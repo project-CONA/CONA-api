@@ -31,17 +31,17 @@ public class User {
 
     private String profileImg;
 
-    @OneToMany(mappedBy = "place")
+    @OneToMany(mappedBy = "user")
     private List<PinPlace> pinPlaces = new ArrayList<>();
+
+    @OneToMany(mappedBy = "user")
+    private List<Review> reviews = new ArrayList<>();
 
     private LocalDateTime signedAt;
 
     @OneToMany(mappedBy = "follower", targetEntity = Follow.class)
-    List<User> followers = new ArrayList<>();
+    private List<User> followers = new ArrayList<>();
 
     @OneToMany(mappedBy ="following", targetEntity = Follow.class)
-    List<User> following = new ArrayList<>();
-
-    @OneToMany(mappedBy = "user")
-    List<Review> reviews = new ArrayList<>();
+    private List<User> following = new ArrayList<>();
 }
