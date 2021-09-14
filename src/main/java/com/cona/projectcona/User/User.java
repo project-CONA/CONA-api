@@ -1,9 +1,8 @@
 package com.cona.projectcona.User;
 
 import com.cona.projectcona.Follow.Follow;
-import com.cona.projectcona.Place.Place;
-import com.cona.projectcona.UserPlace.PinPlace.PinPlace;
-import com.cona.projectcona.UserPlace.Review.Review;
+import com.cona.projectcona.PinPlace.PinPlace;
+import com.cona.projectcona.Review.Review;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

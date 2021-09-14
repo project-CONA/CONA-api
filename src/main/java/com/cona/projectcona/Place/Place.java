@@ -1,7 +1,7 @@
 package com.cona.projectcona.Place;
 
 import com.cona.projectcona.KakaoPlaceSearchSdk.Enum.PlaceCategoryCode;
-import com.cona.projectcona.UserPlace.Review.Review;
+import com.cona.projectcona.Review.Review;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

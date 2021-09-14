@@ -1,4 +1,4 @@
-package com.cona.projectcona.UserPlace.Review;
+package com.cona.projectcona.Review;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

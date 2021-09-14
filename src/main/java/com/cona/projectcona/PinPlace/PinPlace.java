@@ -1,8 +1,7 @@
-package com.cona.projectcona.UserPlace;
+package com.cona.projectcona.PinPlace;
 
 import com.cona.projectcona.Place.Place;
 import com.cona.projectcona.User.User;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -11,11 +10,8 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter
-@Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "dtype")
-@AllArgsConstructor
 @NoArgsConstructor
-public abstract class UserPlace {
+public class PinPlace {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,4 +27,3 @@ public abstract class UserPlace {
 
     private LocalDateTime createdAt;
 }
-
