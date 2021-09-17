@@ -1,6 +1,7 @@
 package com.cona.projectcona.User;
 
 import com.cona.projectcona.Follow.Follow;
+import com.cona.projectcona.Image.Image;
 import com.cona.projectcona.PinPlace.PinPlace;
 import com.cona.projectcona.Review.Review;
 import lombok.AllArgsConstructor;
@@ -28,7 +29,8 @@ public class User {
 
     private String shortComment;
 
-    private String profileImg;
+    @OneToOne(fetch = FetchType.LAZY)
+    private Image profileImage;
 
     @OneToMany(mappedBy = "user")
     private List<PinPlace> pinPlaces = new ArrayList<>();
