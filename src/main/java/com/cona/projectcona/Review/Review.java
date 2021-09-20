@@ -1,6 +1,7 @@
 package com.cona.projectcona.Review;
 
 import com.cona.projectcona.Image.Image;
+import com.cona.projectcona.Image.ReviewImage;
 import com.cona.projectcona.Place.Place;
 import com.cona.projectcona.User.User;
 import lombok.Getter;
@@ -28,8 +29,8 @@ public class Review {
 
     private String content;
 
-    @OneToMany
-    private List<Image> images = new ArrayList<>();
+    @OneToMany(mappedBy = "review")
+    private List<ReviewImage> reviewImages = new ArrayList<>();
 
     private LocalDateTime createdAt;
 }
