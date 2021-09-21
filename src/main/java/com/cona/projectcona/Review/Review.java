@@ -1,7 +1,8 @@
 package com.cona.projectcona.Review;
 
+import com.cona.projectcona.Image.Image;
+import com.cona.projectcona.Image.ReviewImage;
 import com.cona.projectcona.Place.Place;
-import com.cona.projectcona.Review.Image.Image;
 import com.cona.projectcona.User.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,7 +21,6 @@ public class Review {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -30,7 +30,7 @@ public class Review {
     private String content;
 
     @OneToMany(mappedBy = "review")
-    private List<Image> images = new ArrayList<>();
+    private List<ReviewImage> reviewImages = new ArrayList<>();
 
     private LocalDateTime createdAt;
 }
