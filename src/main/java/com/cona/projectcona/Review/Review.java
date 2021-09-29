@@ -3,6 +3,7 @@ package com.cona.projectcona.Review;
 import com.cona.projectcona.Image.Image;
 import com.cona.projectcona.Image.ReviewImage;
 import com.cona.projectcona.Place.Place;
+import com.cona.projectcona.Review.Comment.Comment;
 import com.cona.projectcona.User.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,6 +32,11 @@ public class Review {
 
     @OneToMany(mappedBy = "review")
     private List<ReviewImage> reviewImages = new ArrayList<>();
+
+    @OneToMany(mappedBy = "review")
+    private List<Comment> comments = new ArrayList<>();
+
+    private Float score;
 
     private LocalDateTime createdAt;
 }
