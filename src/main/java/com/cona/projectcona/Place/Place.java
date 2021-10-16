@@ -45,4 +45,6 @@ public class Place {
 
     @OneToMany(mappedBy = "place")
     List<Review> reviews = new ArrayList<>();
+
+    private Float scoreAllAverage;
 }
