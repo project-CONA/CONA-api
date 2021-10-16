@@ -33,17 +33,5 @@ public class User {
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private ProfileImage profileImage;
 
-    @OneToMany(mappedBy = "user")
-    private List<PinPlace> pinPlaces = new ArrayList<>();
-
-    @OneToMany(mappedBy = "user")
-    private List<Review> reviews = new ArrayList<>();
-
     private LocalDateTime signedAt;
-
-    @OneToMany(mappedBy = "follower", targetEntity = Follow.class)
-    private List<User> followers = new ArrayList<>();
-
-    @OneToMany(mappedBy ="following", targetEntity = Follow.class)
-    private List<User> following = new ArrayList<>();
 }
